@@ -23,8 +23,17 @@ namespace TheoryHomework2
                     continue;
                 }
                 processStack(currentState, s);
-                currentState = this.States[currentState.Transitions[s]];
-                path.Add(currentState);
+
+                if (currentState.Transitions.ContainsKey(s))
+                {
+                    currentState = this.States[currentState.Transitions[s]];
+                    path.Add(currentState);
+                }
+                else
+                {
+                    path.Add(new State() { Name = "Fail", IsAcceptance = false});
+                    break;
+                }
             }
             return path;
         }
@@ -40,6 +49,12 @@ namespace TheoryHomework2
         }
 
         private void processStack(State currentState, char s) {
+            if (!currentState.StackTransitions.ContainsKey(s))
+            {
+                this.MachineStatck.Push('X');
+                return;
+            }
+
             var pop = currentState.StackTransitions[s].Key;
             var push = currentState.StackTransitions[s].Value;
 

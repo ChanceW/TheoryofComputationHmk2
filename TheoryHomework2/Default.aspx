@@ -29,31 +29,67 @@
                     <td><asp:Textbox class="form-control" ID="pda2Text" runat="server" /></td>
                     <td><asp:Textbox class="form-control" ID="cfgText" runat="server" /></td>
                 </tr>
-                <tr><td colspan="3"><button class="btn btn-primary process">Process</button><button class="btn btn-primary reset">Reset</button></td></tr>
+                <tr><td colspan="3"><button class="btn btn-primary process">Process</button><button class="btn reset">Reset</button></td></tr>
                 <tr class="graphRow">
                     <td><asp:Panel class="graphPanel pda" graph="pda" ID="pdaPanel" runat="server">
-                        <svg height="100" width="120">
-                          <circle class="Q0" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="#fff" /> 
-                          <text x="43" y="55" class="small">Q0</text>
+						<svg height="300" width="50">
+                          <line x1="0" y1="150" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
+						  <line x1="45" y1="145" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
+						  <line x1="45" y1="155" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
                         </svg>
-                        <svg height="100" width="120">
-                          <circle class="Q1" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="#fff" />
-                          <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="#fff" /> 
-                          <text x="43" y="55" class="small">Q1</text>
+                        <svg height="300" width="100">
+                          <circle class="Q0" cx="50" cy="150" r="40" stroke="black" stroke-width="3" fill="#fff" /> 
+						  <circle cx="50" cy="95" r="15" stroke="black" stroke-width="2" fill="#fff" /> 
+						  <circle cx="50" cy="205" r="15" stroke="black" stroke-width="2" fill="#fff" /> 
+                          <text x="43" y="155" class="small">Q0</text>
+						  <text x="38" y="70" class="small">0/E/0</text>
+						  <text x="38" y="240" class="small">1/E/1</text>
+                        </svg>
+						<svg height="300" width="50">
+                          <line x1="0" y1="150" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
+						  <line x1="45" y1="145" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
+						  <line x1="45" y1="155" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
+						  <text x="10" y="130" class="small">0/E/E</text>
+						  <text x="10" y="145" class="small">1/E/E</text>
+						  <text x="10" y="165" class="small">E/E/E</text>
+                        </svg>
+                        <svg height="300" width="100">
+                          <circle class="Q1" cx="50" cy="150" r="40" stroke="black" stroke-width="3" fill="#fff" />
+                          <circle class="accept" cx="50" cy="150" r="20" stroke="black" stroke-width="3" fill="#fff" /> 
+						  <circle cx="50" cy="95" r="15" stroke="black" stroke-width="2" fill="#fff" /> 
+						  <circle cx="50" cy="205" r="15" stroke="black" stroke-width="2" fill="#fff" /> 
+                          <text x="43" y="155" class="small">Q1</text>
+						  <text x="38" y="70" class="small">0/0/E</text>
+						  <text x="38" y="240" class="small">1/1/E</text>
                         </svg>
                         <div class="path"></div>
                         <div class="stackEmpty"></div>
                         </asp:Panel>
                     </td>
                     <td><asp:Panel class="graphPanel pda2" graph="pda2" ID="pda2Panel" runat="server">
-                        <svg height="100" width="120">
-                          <circle class="Q0" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="#fff" /> 
-                          <text x="43" y="55" class="small">Q0</text>
+						<svg height="300" width="50">
+                          <line x1="0" y1="150" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
+						  <line x1="45" y1="145" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
+						  <line x1="45" y1="155" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
                         </svg>
-                        <svg height="100" width="120">
-                          <circle class="Q1" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="#fff" /> 
-                          <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="#fff" /> 
-                          <text x="43" y="55" class="small">Q1</text>
+                        <svg height="300" width="100">
+                          <circle class="Q0" cx="50" cy="150" r="40" stroke="black" stroke-width="3" fill="#fff" /> 
+						  <circle cx="50" cy="95" r="15" stroke="black" stroke-width="2" fill="#fff" /> 
+                          <text x="43" y="155" class="small">Q0</text>
+						  <text x="38" y="70" class="small">0/E/X</text>
+                        </svg>
+						<svg height="300" width="50">
+                          <line x1="0" y1="150" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
+						  <line x1="45" y1="145" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
+						  <line x1="45" y1="155" x2="50" y2="150" style="stroke:rgb(0,0,0);stroke-width:2" />
+						  <text x="10" y="165" class="small">E/E/E</text>
+                        </svg>
+                        <svg height="300" width="100">
+                          <circle class="Q1" cx="50" cy="150" r="40" stroke="black" stroke-width="3" fill="#fff" /> 
+                          <circle class="accept" cx="50" cy="150" r="20" stroke="black" stroke-width="3" fill="#fff" /> 
+						  <circle cx="50" cy="95" r="15" stroke="black" stroke-width="2" fill="#fff" /> 
+                          <text x="43" y="155" class="small">Q1</text>
+						  <text x="38" y="70" class="small">1/X/E</text>
                         </svg>
                         <div class="path"></div>
                         <div class="stackEmpty"></div>
@@ -63,14 +99,14 @@
                 </tr>
                 <tr class="buttonRow">
                     <td>
-                        <button graph="pda" class="btn btn-success pda" disabled>Start</button>
+                        <button graph="pda" class="btn btn-info pda" disabled>Start</button>
                     </td>
                     <td>
-                        <button graph="pda2" class="btn btn-success pda2" disabled>Start</button>
+                        <button graph="pda2" class="btn btn-info pda2" disabled>Start</button>
 
                     </td>
                     <td>
-                        <button graph="cfg" class="btn btn-success cfg" disabled>Start</button>
+                        <button graph="cfg" class="btn btn-info cfg" disabled>Start</button>
                     </td>
                 </tr>
             </table>
@@ -78,6 +114,10 @@
     </form>
     </center>
     <style>
+        .process {
+            margin-right: 20px;
+        }
+
         .btn {
                 padding: 3px 3px
         }
@@ -96,7 +136,7 @@
         }
 
         .graphPanel {
-            height: 240px;
+            height: 320px;
             overflow-y:auto;
         }
         .graphPanel.cfg div{

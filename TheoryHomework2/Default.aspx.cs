@@ -37,6 +37,7 @@ namespace TheoryHomework2
                 var pdaResults = pda.ProcessString(text);
                 pdaPanel.Attributes["value"] = String.Join(":", pdaResults.Select(x => x.Name));
                 pdaPanel.Attributes["stackisempty"] = $"{!pda.MachineStatck.Any()}";
+                pdaPanel.Attributes["isaccepted"] = $"{pdaResults.Last().IsAcceptance}";
 
                 //PDA a^n b^b
                 var state3 = new State() { Id = 1, Name = "Q0", IsAcceptance = false};
@@ -53,6 +54,7 @@ namespace TheoryHomework2
                 var pda2Results = pda2.ProcessString(pda2Text.Text);
                 pda2Panel.Attributes["value"] = String.Join(":", pda2Results.Select(x => x.Name));
                 pda2Panel.Attributes["stackisempty"] = $"{!pda2.MachineStatck.Any()}";
+                pda2Panel.Attributes["isaccepted"] = $"{pda2Results.Last().IsAcceptance}";
 
 
                 //CFG
