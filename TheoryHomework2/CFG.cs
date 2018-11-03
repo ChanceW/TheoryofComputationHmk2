@@ -8,7 +8,7 @@ namespace TheoryHomework2
 {
     static class  CFG
     {
-        private static string[] language = new string[] { "0S0", "1S1", "0", "1"};
+        private static string[] language = new string[] { "0S0", "1S1", "0", "1", ""};
 
         public static List<string> ProcessString(string input) {
             var result = new List<string>() { input };

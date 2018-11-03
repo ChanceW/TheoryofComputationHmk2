@@ -13,6 +13,10 @@ namespace TheoryHomework2
         public List<State> ProcessString(string input) {
             var currentState = this.States.First().Value;
             var path = new List<State>() { currentState };
+            if (String.IsNullOrEmpty(input))
+            {
+                input = "S";
+            }
 
             var symbols = input.ToCharArray();
             foreach (var s in symbols) {
